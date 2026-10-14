@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and generated outputs
+data/raw/
+data/processed/
+datasets/
+results/
+outputs/
+
+# Model artifacts
+*.pt
+*.pth
+*.onnx
+*.tflite
+
+# OS/editor
+.DS_Store
+.vscode/
