@@ -1,0 +1,144 @@
+train: 2930 rows | 5 grades | numeric features: 43
+val: 366 rows | 5 grades | numeric features: 43
+test: 366 rows | 5 grades | numeric features: 43
+
+============================================================
+Training: logistic_regression
+Validation accuracy:          0.7322
+Validation macro-F1:          0.5839
+Validation weighted-F1:       0.7421
+Validation balanced accuracy: 0.6227
+
+Validation classification report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.98      0.98       172
+           1       0.60      0.68      0.64        40
+           2       0.76      0.46      0.57       104
+           3       0.27      0.50      0.35        22
+           4       0.31      0.50      0.38        28
+
+    accuracy                           0.73       366
+   macro avg       0.58      0.62      0.58       366
+weighted avg       0.78      0.73      0.74       366
+
+Validation confusion matrix (true rows, predicted columns):
+[[168   3   0   1   0]
+ [  0  27   6   1   6]
+ [  4  12  48  21  19]
+ [  0   1   4  11   6]
+ [  0   2   5   7  14]]
+
+============================================================
+Training: linear_svm
+Validation accuracy:          0.7869
+Validation macro-F1:          0.6141
+Validation weighted-F1:       0.7887
+Validation balanced accuracy: 0.6176
+
+Validation classification report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.99      0.98       172
+           1       0.70      0.70      0.70        40
+           2       0.77      0.68      0.72       104
+           3       0.30      0.32      0.31        22
+           4       0.32      0.39      0.35        28
+
+    accuracy                           0.79       366
+   macro avg       0.61      0.62      0.61       366
+weighted avg       0.79      0.79      0.79       366
+
+Validation confusion matrix (true rows, predicted columns):
+[[171   1   0   0   0]
+ [  1  28   7   0   4]
+ [  4   8  71  10  11]
+ [  1   1   5   7   8]
+ [  0   2   9   6  11]]
+
+============================================================
+Training: rbf_svm
+Validation accuracy:          0.7568
+Validation macro-F1:          0.5925
+Validation weighted-F1:       0.7616
+Validation balanced accuracy: 0.6113
+
+Validation classification report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98       172
+           1       0.62      0.75      0.68        40
+           2       0.74      0.57      0.64       104
+           3       0.26      0.36      0.30        22
+           4       0.33      0.39      0.36        28
+
+    accuracy                           0.76       366
+   macro avg       0.59      0.61      0.59       366
+weighted avg       0.78      0.76      0.76       366
+
+Validation confusion matrix (true rows, predicted columns):
+[[169   2   0   1   0]
+ [  1  30   6   0   3]
+ [  4  13  59  14  14]
+ [  0   1   8   8   5]
+ [  0   2   7   8  11]]
+
+============================================================
+Validation ranking:
+              model  val_accuracy  val_macro_f1  val_weighted_f1  val_balanced_accuracy
+         linear_svm      0.786885      0.614076         0.788735               0.617583
+            rbf_svm      0.756831      0.592509         0.761561               0.611272
+logistic_regression      0.732240      0.583931         0.742127               0.622657
+
+Selected using validation macro-F1: linear_svm
+
+Provisional test results (not final publication metrics):
+{
+  "selected_model": "linear_svm",
+  "status": "provisional_pending_duplicate_audit",
+  "test_accuracy": 0.7896174863387978,
+  "test_macro_f1": 0.599553230413689,
+  "test_weighted_f1": 0.7903711080052309,
+  "test_balanced_accuracy": 0.606459199927352,
+  "test_confusion_matrix": [
+    [
+      192,
+      3,
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      19,
+      7,
+      1,
+      1
+    ],
+    [
+      3,
+      15,
+      57,
+      5,
+      7
+    ],
+    [
+      0,
+      0,
+      8,
+      5,
+      4
+    ],
+    [
+      2,
+      4,
+      7,
+      4,
+      16
+    ]
+  ]
+}
+
+Saved models to: results/models
+Saved metrics to: results/metrics
+Feature columns: ['q_brightness', 'q_dark_frac', 'q_decode_factor', 'q_fov_coverage', 'q_fov_diameter_px', 'q_noise_sigma', 'q_od_peak_z', 'q_od_x', 'q_od_y', 'q_orig_h', 'q_orig_w', 'q_saturated_frac', 'q_sharpness', 'color_chroma_rg', 'color_chroma_bg', 'color_cv_r', 'color_cv_g', 'color_cv_b', 'color_brightness', 'tex_contrast', 'tex_dissimilarity', 'tex_homogeneity', 'tex_energy', 'tex_correlation', 'vessel_density', 'vessel_n_components', 'vessel_mean_component_area', 'vessel_largest_frac', 'vessel_mean_contrast', 'red_count', 'red_small_count', 'red_large_count', 'red_area_ratio', 'red_mean_area', 'red_mean_contrast', 'red_quadrant_min_count', 'red_quadrants_over_thresh', 'bright_count', 'bright_area_ratio', 'bright_mean_area', 'bright_largest_area_ratio', 'bright_mean_contrast', 'bright_quadrants_over_thresh']

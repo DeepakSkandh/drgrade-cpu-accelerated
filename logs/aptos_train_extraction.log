@@ -1,0 +1,45 @@
+2930 images | grades: {0: 1434, 1: 300, 2: 808, 3: 154, 4: 234} | workers: 4
+  100/2930  (28.7 img/s)
+  200/2930  (29.5 img/s)
+  300/2930  (29.9 img/s)
+  400/2930  (30.4 img/s)
+  500/2930  (30.9 img/s)
+  600/2930  (30.9 img/s)
+  700/2930  (30.9 img/s)
+  800/2930  (31.0 img/s)
+  900/2930  (31.1 img/s)
+  1000/2930  (31.2 img/s)
+  1100/2930  (31.1 img/s)
+  1200/2930  (31.1 img/s)
+  1300/2930  (31.1 img/s)
+  1400/2930  (31.2 img/s)
+  1500/2930  (31.2 img/s)
+  1600/2930  (31.2 img/s)
+  1700/2930  (31.2 img/s)
+  1800/2930  (31.3 img/s)
+  1900/2930  (31.3 img/s)
+  2000/2930  (31.2 img/s)
+  2100/2930  (31.1 img/s)
+  2200/2930  (31.3 img/s)
+  2300/2930  (31.3 img/s)
+  2400/2930  (31.2 img/s)
+  2500/2930  (31.1 img/s)
+  2600/2930  (31.1 img/s)
+  2700/2930  (31.1 img/s)
+  2800/2930  (31.1 img/s)
+  2900/2930  (31.1 img/s)
+  2930/2930  (31.0 img/s)
+
+Saved 2930 rows -> data/processed/aptos_train_features_v2.csv
+Wall time 94.4 s | throughput 31.03 img/s with 4 workers
+Per-image stage time (ms, median):
+total            130.6
+decode            48.9
+crop_resize       34.7
+vessel_red        11.1
+shade_correct      9.1
+bright             6.9
+texture            5.7
+quality            3.8
+color              1.4
+optic_disc         1.0

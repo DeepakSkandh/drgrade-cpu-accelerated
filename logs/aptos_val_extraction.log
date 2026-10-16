@@ -1,0 +1,19 @@
+366 images | grades: {0: 172, 1: 40, 2: 104, 3: 22, 4: 28} | workers: 4
+  100/366  (21.7 img/s)
+  200/366  (22.1 img/s)
+  300/366  (24.2 img/s)
+  366/366  (24.2 img/s)
+
+Saved 366 rows -> data/processed/aptos_val_features_v2.csv
+Wall time 15.2 s | throughput 24.12 img/s with 4 workers
+Per-image stage time (ms, median):
+total            155.8
+decode            59.3
+crop_resize       39.9
+vessel_red        14.3
+shade_correct     10.8
+bright             9.3
+texture            7.6
+quality            5.0
+color              1.7
+optic_disc         1.3
